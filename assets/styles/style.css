@@ -43,6 +43,10 @@ label {
     font-size: 18px;
 }
 
+input {
+    color: #2E475A;
+}
+
 #passwordHelp {
     font-size: 16px;
     color: #2E475A;
@@ -50,4 +54,13 @@ label {
 
 .register {
     color: #2E475A;
+}
+
+@media (min-width: 768px) {
+    #cont-register {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
