@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = formData.get('password');
 
         // URL de tu API de login
-        const apiUrl = 'http://localhost:3000/users/auth';
+        const apiUrl = 'https://08e34de0-73c5-49c9-9779-5f293c9b3574-00-15rkm6y886a5u.kirk.replit.dev/users/auth';
 
         // Opciones para la solicitud fetch
         const fetchOptions = {
