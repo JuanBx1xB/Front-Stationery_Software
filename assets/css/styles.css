@@ -47,6 +47,7 @@
 label {
     color: #2E475A;
     font-size: 18px;
+    font-weight: 500;
 }
 
 input {
@@ -62,8 +63,14 @@ input {
     color: #2E475A;    
 }
 
+/* Register Form */
 .register {
     color: #2E475A;
+}
+
+.btn-is {
+    background: #517D9E;
+    border: none;
 }
 
 nav {
