@@ -22,6 +22,12 @@
     color: #fff;
 }
 
+.btn-i:focus {
+    background-color: #456C8D; 
+    color: #fff;
+    border: 1px solid #fff;
+}
+
 .btn-i:active:focus {
     background-color: #456C8D; 
     color: #fff;
@@ -50,6 +56,10 @@ input {
 #passwordHelp {
     font-size: 16px;
     color: #2E475A;
+}
+
+#login-message {
+    color: #2E475A;    
 }
 
 .register {
