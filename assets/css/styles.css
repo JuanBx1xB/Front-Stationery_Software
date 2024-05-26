@@ -56,6 +56,26 @@ input {
     color: #2E475A;
 }
 
+nav {
+    background-color: #78B9EB;
+}
+
+#menu {
+    color: #2E475A;
+}
+
+#logoMenu {
+    height: 120px;
+}
+
+#tasks {
+    background-color: rgba(120, 185, 235, 0.4);
+}
+
+#exit {
+    font-size: 50px;
+}
+
 @media (min-width: 768px) {
     #cont-register {
         position: absolute;
