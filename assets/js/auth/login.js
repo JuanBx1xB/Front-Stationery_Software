@@ -27,11 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                return response.text();
+                return response.json(); // Cambiado de response.text() a response.json()
             })
             .then(data => {
                 // Verificar si la respuesta es "Inicio de Sesión Exitoso!"
-                if (data === 'Inicio de Sesión Exitoso!') {
+                if (data.message === 'Inicio de Sesión Exitoso!') {
+                    // Almacenar los datos del usuario en el almacenamiento local
+                    localStorage.setItem('user', JSON.stringify(data.user));
+
                     let baseUrl = '';
                     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
                         // Si estás en un entorno local

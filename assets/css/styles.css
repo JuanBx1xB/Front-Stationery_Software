@@ -70,7 +70,7 @@ nav {
     background-color: #78B9EB;
 }
 
-#menu {
+.menu {
     color: #2E475A;
 }
 
@@ -84,6 +84,18 @@ nav {
 
 #exit {
     font-size: 50px;
+}
+
+.greeting {
+    background-color: #3F627C;
+}
+
+#login, #name, #description {
+    color: #fff;
+}
+
+#name {
+    text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
