@@ -32,11 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 // Verificar si la respuesta es "Inicio de Sesión Exitoso!"
                 if (data === 'Inicio de Sesión Exitoso!') {
-                    // Construye la ruta base de la página principal
-                    const baseUrl = window.location.origin;
-                    const pathToHome = '/pages/main/home.html';
+                    let baseUrl = '';
+                    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                        // Si estás en un entorno local
+                        baseUrl = window.location.origin;
+                    } else {
+                        // Si estás en GitHub Pages
+                        const repoName = window.location.pathname.split('/')[1];
+                        baseUrl = window.location.origin + '/' + repoName;
+                    }
 
-                    // Combina la ruta base con la ruta relativa a la página principal
+                    // Construye la ruta relativa a la página principal
+                    const pathToHome = '/pages/main/home.html';
                     const redirectUrl = baseUrl + pathToHome;
 
                     // Redirige al usuario a la página principal
