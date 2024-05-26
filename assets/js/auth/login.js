@@ -32,8 +32,15 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 // Verificar si la respuesta es "Inicio de Sesión Exitoso!"
                 if (data === 'Inicio de Sesión Exitoso!') {
-                    // Redirigir a products.html después de un inicio de sesión exitoso
-                    window.location.href = '/pages/main/home.html'; // Cambia a la URL de tu página de productos
+                    // Construye la ruta base de la página principal
+                    const baseUrl = window.location.origin;
+                    const pathToHome = '/pages/main/home.html';
+
+                    // Combina la ruta base con la ruta relativa a la página principal
+                    const redirectUrl = baseUrl + pathToHome;
+
+                    // Redirige al usuario a la página principal
+                    window.location.href = redirectUrl;
                 } 
             })
             .catch(error => {
