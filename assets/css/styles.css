@@ -105,6 +105,69 @@ nav {
     text-transform: uppercase;
 }
 
+.form-check-label {
+    font-weight: normal;
+}
+
+/* Products Page */
+.contProducts {
+    background-color: rgba(120, 185, 235, 0.4);
+}
+
+.table thead th {
+    color: #2E475A;
+}
+
+.table tbody th {
+    vertical-align: middle;
+    color: #3F627C;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    color: #2E475A;
+}
+
+#titleProducts {
+    color: #2E475A;
+}
+
+.btn-edit {
+    width: 85px;
+}
+
+#updateProductModalLabel, #deleteConfirmationModalLabel, #addProductModalLabel, #deleteAlert {
+    color: #2E475A;
+}
+
+.btn-add {
+    padding: 10px;
+    background: #456C8D;
+    border: none;
+    color: #fff;
+}
+
+.btn-add:hover {
+    background: #2E475A;
+    color: #fff;
+}
+
+.btn-add:focus {
+    background-color: #2E475A; 
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-add:active:focus {
+    background-color: #2E475A; 
+    color: #fff;
+}
+
+#help {
+    font-weight: 500;
+    color: #2E475A;
+}
+
 @media (min-width: 768px) {
     #cont-register {
         position: absolute;
