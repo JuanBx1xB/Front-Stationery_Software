@@ -67,7 +67,7 @@ input {
 }
 
 /* Register Form */
-.register {
+.register, .modal-title {
     color: #2E475A;
 }
 
