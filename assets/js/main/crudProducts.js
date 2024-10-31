@@ -64,6 +64,26 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => console.error('Error al obtener los productos:', error));
+
+    // Agregar el evento de búsqueda
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const searchValue = normalizeText(this.value.toLowerCase());
+        const productRows = document.querySelectorAll('#productTableBody tr');
+
+        productRows.forEach(row => {
+            const productName = normalizeText(row.querySelector('td:nth-child(2)').textContent.toLowerCase());
+            if (productName.includes(searchValue)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+
+    // Función para normalizar el texto (eliminar acentos)
+    function normalizeText(text) {
+        return text.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Elimina acentos
+    }
 });
 
 function deleteProduct(productCode) {
